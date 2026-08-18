@@ -6,13 +6,28 @@ public class Restaurante implements Administrativo{
     private String nome;
 
     @Override
-    public String listarFuncionarios(List<Funcionario> funcionarios) {
-        return "";
+    public void listarFuncionarios(List<Funcionario> funcionarios) {
+        if(funcionarios.isEmpty()) {
+            System.out.println("Nenhum funcionário encontrado");
+        }
+
+        for(Funcionario func : funcionarios) {
+            System.out.println(func);
+        }
     }
 
     @Override
-    public String listarClientesFidelizados(List<Cliente> clientes) {
-        return "";
+    public void listarClientesFidelizados(List<Cliente> clientes) {
+        if(clientes.isEmpty()) {
+            System.out.println("Nenhum cliente encontrado");
+        }
+
+        // Listando apenas clientes fidelizados
+        for(Cliente cli : clientes) {
+            if(cli.getFidelizado()) {
+                System.out.println(cli);
+            }
+        }
     }
 
     @Override
