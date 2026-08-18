@@ -32,7 +32,8 @@ public class Restaurante implements Administrativo{
 
     @Override
     public void addFuncionario(Funcionario funcionario, List<Funcionario> listFuncionarios) {
-
+        listFuncionarios.add(funcionario);
+        System.out.println("Funcionario: " + funcionario + " adicionado com sucesso na listagem!");
     }
 
     public Restaurante(String endereco, List<Funcionario> funcionarios, String nome) {
